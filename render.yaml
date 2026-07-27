@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: visa-schengen-dossier-beton
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: FB_PIXEL_ID
+        sync: false
+      - key: FB_CONVERSION_API_TOKEN
+        sync: false
